@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Banner from './Banner';
@@ -9,19 +9,20 @@ import SidebarMenu from './SidebarMenu';
 
 function Layout() {
     const productListRef = useRef(null);
+
     const scrollToProductList = () => {
         if (productListRef.current) {
             window.scrollTo({
                 top: productListRef.current.offsetTop,
-                behavior: 'smooth'
+                behavior: 'smooth',
             });
         }
     };
 
+
     return (
         <div>
             <Navbar />
-            <SidebarMenu />
             <Hero scrollToProductList={scrollToProductList} />
             <Banner />
             <div ref={productListRef}>

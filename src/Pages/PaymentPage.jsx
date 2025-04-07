@@ -11,6 +11,7 @@ import './PaymentPage.css';
 import Navbar from '../components/layout/Navbar';
 import AddToCardLayout from '../components/layout/AddToCardLayout';
 import { FaShoppingBag } from 'react-icons/fa';
+import TotalPrice from '../components/layout/TotalPrice';
 
 const PaymentPage = () => {
     const [step, setStep] = useState(1);
@@ -27,11 +28,15 @@ const PaymentPage = () => {
                             <FaShoppingBag fontSize={30} />
                             <p style={{ marginTop: '20px' }}>Sepetiniz Bostur</p>
                         </div>
-
                     ) : (
-                        cartItems.map((item) => (
-                            <OrderSummary key={item.id} product={item} />
-                        ))
+                        <div>
+                            <TotalPrice />
+                            {cartItems.map((item) => (
+                                <div key={item.id}>
+                                    <OrderSummary product={item} />
+                                </div>
+                            ))}
+                        </div>
                     )}
                 </div>
                 <div className="payment-column">

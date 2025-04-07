@@ -3,7 +3,7 @@ import './Navbar.css';
 import './SidebarMenu.css';
 import { useNavigate } from 'react-router-dom';
 
-function SidebarMenu({ isOpen, scrollToProductList }) {
+function SidebarMenu({ isOpen }) {
 
     const navigate = useNavigate();
 

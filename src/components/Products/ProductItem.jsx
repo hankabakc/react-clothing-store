@@ -36,18 +36,15 @@ function ProductItem({ product }) {
             </Link>
 
             <div className='button-div'>
-                <Button label="Satin Al" />
                 <div className='add-to-cart-container'>
-                    {popupVisible && (
-                        <div className='popup-size-options'>
-                            {['S', 'M', 'X', 'XL'].map(size => (
-                                <div key={size} className="popup-text" onClick={() => handleSizeSelect(size)}>
-                                    {size}
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                    <Button label="Sepete Ekle" onClick={() => setPopupVisible(true)} />
+                    <div className={`popup-size-options ${popupVisible ? 'show' : 'hide'}`}>
+                        {['S', 'M', 'X', 'XL'].map(size => (
+                            <div key={size} className="popup-text" onClick={() => handleSizeSelect(size)}>
+                                {size}
+                            </div>
+                        ))}
+                    </div>
+                    <Button label="Sepete Ekle" onClick={() => setPopupVisible(!popupVisible)} />
                 </div>
             </div>
         </li>

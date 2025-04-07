@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const PaymentForm = () => {
+    const [cardNumber, setCardNumber] = useState('');
+
+    const handleCardNumberChange = (e) => {
+        const input = e.target.value.replace(/\D/g, '');
+        const formatted = input.replace(/(\d{4})(?=\d)/g, '$1 ');
+        setCardNumber(formatted);
+    };
+
     return (
         <div className="payment-form">
             <div className="form-group">
@@ -18,6 +26,9 @@ const PaymentForm = () => {
                     type="text"
                     className="form-input"
                     placeholder="1234 5678 9012 3456"
+                    value={cardNumber}
+                    onChange={handleCardNumberChange}
+                    maxLength="19"
                 />
             </div>
 
@@ -26,15 +37,17 @@ const PaymentForm = () => {
                     <label className="form-label">Son Kullanma Tarihi</label>
                     <div className="date-selects">
                         <select className="form-select">
-                            {Array.from({ length: 12 }, (_, i) => i + 1).map(month => (
+                            {Array.from({ length: 12 }, (_, i) => i + 1).map((month) => (
                                 <option key={month} value={month.toString().padStart(2, '0')}>
                                     {month.toString().padStart(2, '0')}
                                 </option>
                             ))}
                         </select>
                         <select className="form-select">
-                            {Array.from({ length: 10 }, (_, i) => new Date().getFullYear() + i).map(year => (
-                                <option key={year} value={year}>{year}</option>
+                            {Array.from({ length: 10 }, (_, i) => new Date().getFullYear() + i).map((year) => (
+                                <option key={year} value={year}>
+                                    {year}
+                                </option>
                             ))}
                         </select>
                     </div>
@@ -46,6 +59,7 @@ const PaymentForm = () => {
                         type="text"
                         className="form-input"
                         placeholder="123"
+                        maxLength={3}
                     />
                 </div>
             </div>

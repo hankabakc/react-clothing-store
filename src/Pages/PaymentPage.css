@@ -34,6 +34,17 @@
     margin-bottom: 0.75rem;
 }
 
+.total-price-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9fafb;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 25px;
+
+
+}
+
 .summary-box {
     background-color: #f9fafb;
     border-radius: 0.5rem;

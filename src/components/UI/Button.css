@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 100%;
+    margin-top: 30px;
 }
 
 .popup-size-options {
@@ -16,21 +18,41 @@
     gap: 6px;
     position: absolute;
     bottom: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 3px;
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    animation: popupUp 0.3s forwards;
+    transition: transform 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+
+
+.popup-size-options.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.popup-size-options.hide {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
 }
 
 .popup-text {
     background-color: black;
     color: white;
     font-size: 12px;
-    padding: 4px 5px;
+    padding: 8px 17px;
     border-radius: 4px;
     white-space: nowrap;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popup-text:hover {
+    background-color: rgb(180, 180, 180);
+    color: black;
 }
 
 @keyframes popupUp {
@@ -53,22 +75,20 @@
 }
 
 
-.button-div button {
-    margin-top: 10px;
+.button-div-addtocart {
     padding: 5px;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     background-color: black;
     color: white;
-    width: 90px;
+    width: 100%;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    max-height: 30px;
 }
 
-.button-div button:hover {
+.button-div-addtocart:hover {
     transform: translateY(-2px);
     cursor: pointer;
 }
