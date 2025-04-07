@@ -1,12 +1,41 @@
-# React + Vite
+# React Clothing Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, bir kıyafet mağazası web sitesini simüle etmek amacıyla geliştirilmiş bir React uygulamasıdır.
 
-Currently, two official plugins are available:
+## Başlangıç
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Gereksinimler
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-## Expanding the ESLint configuration
+### Kurulum
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Bu projeyi klonlayın:
+   ```bash
+   git clone https://github.com/hankabakc/react-clothing-store.git
+Proje klasörüne gidin:
+cd react-clothing-store
+
+Gerekli bağımlılıkları yükleyin:
+npm install
+
+
+**Uygulamanın Çalıştırılması**
+Projenin geliştirme ortamında çalıştırılması için şu komutu kullanın:
+```bash 
+npm run dev 
+```
+Uygulama başarılı bir şekilde çalıştığında, tarayıcınızda 
+```bash
+http://localhost:3000
+```
+ adresinde görüntülenebilir (Sizin hostunuza göre değişebilir).
+
+**-YAPILANLAR:**  
+Kıyafet ürünleri listeleme ve detay sayfalarına yönlendirme  
+Sepet işlemleri (ürün ekleme, çıkarma, arttırma, azaltma vb.)  
+Ödeme sayfası ve ödeme formu  
+Ödeme sayfasında ürünlerin görüntülenmesi  
+
+React, Axios ve Vite ile yapılandırılmış bir projedir
+
