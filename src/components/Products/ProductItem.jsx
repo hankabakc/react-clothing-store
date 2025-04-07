@@ -18,7 +18,7 @@ function ProductItem({ product }) {
             size: size
         }));
 
-        setPopupVisible(prev => !prev); // Toggle yapıyoruz
+        setPopupVisible(prev => !prev);
     };
 
     const handleSizeSelect = (size) => {

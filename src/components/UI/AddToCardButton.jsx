@@ -1,4 +1,3 @@
-// src/components/layout/AddToCardButton.jsx
 import React from 'react';
 import './AddToCardButton.css';
 import { FaShoppingBag } from 'react-icons/fa';

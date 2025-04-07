@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';  // Redux'tan veri almak için import ediyoruz
+import { useSelector } from 'react-redux';
 import OrderSummary from '../components/layout/OrderSumary';
 import PaymentMethods from '../components/layout/PaymentMethods';
 import PaymentForm from '../components/layout/PaymentForm';
