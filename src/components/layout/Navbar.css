@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    gap: 20px;
+}
+
+.navbar-links li {
+    transition: color 0.3s ease;
+}
+
+.navbar-links li:hover {
+    color: gray;
+
+}
+
+body {
+    margin: 0;
+    padding-top: 59px;
+}
