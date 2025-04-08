@@ -1,6 +1,7 @@
 import React from 'react';
 
 const TransferInfo = () => {
+
     return (
         <div className="transfer-info">
             <p className="transfer-text">Banka havalesi ile ödeme yapmak için aşağıdaki banka hesaplarımızı kullanabilirsiniz:</p>

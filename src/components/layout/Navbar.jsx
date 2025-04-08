@@ -4,7 +4,7 @@ import { TiThMenu } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 import SidebarMenu from './SidebarMenu.jsx';
 
-function Navbar() {
+function Navbar({ scrollToProductList }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -21,7 +21,7 @@ function Navbar() {
             </ul>
             <TiThMenu style={{ fontSize: '20px' }} onClick={toggleMenu} />
 
-            <SidebarMenu isOpen={isOpen} />
+            <SidebarMenu isOpen={isOpen} scroll={scrollToProductList} />
         </nav>
     );
 }

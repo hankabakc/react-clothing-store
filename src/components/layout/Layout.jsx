@@ -1,11 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
 import Banner from './Banner';
 import ProductList from '../Products/ProductList';
 import Footer from './Footer';
 import AddToCardLayout from './AddToCardLayout';
-import SidebarMenu from './SidebarMenu';
 
 function Layout() {
     const productListRef = useRef(null);
@@ -19,10 +18,9 @@ function Layout() {
         }
     };
 
-
     return (
         <div>
-            <Navbar />
+            <Navbar scrollToProductList={scrollToProductList} />
             <Hero scrollToProductList={scrollToProductList} />
             <Banner />
             <div ref={productListRef}>

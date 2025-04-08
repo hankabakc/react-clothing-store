@@ -63,7 +63,7 @@ function SidebarCartMenu({ isToggled, toggleSidebar }) {
                                     </div>
                                     <button
                                         className="remove-button"
-                                        onClick={() => dispatch(removeFromCart(item.id))}
+                                        onClick={() => dispatch(removeFromCart({ id: item.id, size: item.size }))} // Doğru kullanım
                                     >
                                         <span>×</span>
                                     </button>
